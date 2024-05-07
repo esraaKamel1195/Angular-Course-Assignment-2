@@ -1,0 +1,38 @@
+<form>
+  <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label"
+      >Product Name</label
+    >
+    <textarea
+      class="form-control"
+      id="exampleFormControlTextarea1"
+      rows="3"
+      [(ngModel)]="name"
+    ></textarea>
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label"
+      >Product Price</label
+    >
+    <textarea
+      class="form-control"
+      id="exampleFormControlTextarea1"
+      rows="3"
+      [(ngModel)]="price"
+    ></textarea>
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label"
+      >Product description</label
+    >
+    <textarea
+      class="form-control"
+      id="exampleFormControlTextarea1"
+      rows="3"
+      [(ngModel)]="descr"
+    ></textarea>
+  </div>
+  <div class="col-auto">
+    <button type="submit" class="btn btn-primary mb-3" (click)="addProduct()">Add Product</button>
+  </div>
+</form>
