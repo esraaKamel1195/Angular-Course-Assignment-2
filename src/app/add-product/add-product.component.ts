@@ -6,22 +6,23 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrl: './add-product.component.css',
 })
 export class AddProductComponent {
-  // name: string = '';
-  // price: number = 0;
-  // descr: string = '';
-  product: { name: string; image: ''; price: number; description: string } = {
-    name: '',
-    image: '',
-    price: 0,
-    description: '',
-  };
 
-  @Output() onAddProduct = new EventEmitter<any>();
+  product: { name: string; image: string; price: number; description: string } =
+    {
+      name: '',
+      image: '',
+      price: 0,
+      description: '',
+    };
+
+  @Output() onAddProduct = new EventEmitter<{
+    name: string;
+    image: string;
+    price: number;
+    description: string;
+  }>();
 
   addProduct() {
-    // this.product.name = this.name;
-    // this.product.price = this.price;
-    // this.product.description = this.descr;
     this.onAddProduct.emit(this.product);
   }
 }
