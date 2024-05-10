@@ -1,6 +1,13 @@
 <main class="main">
   <app-add-product (onAddProduct)="addNewProduct($event)"></app-add-product>
-  <app-products *ngFor="let product of products" [product]="product"></app-products>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <app-products *ngFor="let product of products" [product]="product">
+        </app-products>
+      </div>
+    </div>
+  </div>
 </main>
 
 <router-outlet />

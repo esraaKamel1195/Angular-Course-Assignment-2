@@ -11,12 +11,9 @@ export class AppComponent {
     { name: 'product1', image: '', price: 50, description: 'description' },
     { name: 'product2', image: '', price: 50, description: 'description' },
     { name: 'product3', image: '', price: 50, description: 'description' },
-    { name: 'product4', image: '', price: 50, description: 'description' },
-    { name: 'product5', image: '', price: 50, description: 'description' },
   ];
 
-  addNewProduct(product:any) {
+  addNewProduct(product: any) {
     this.products.push(product);
-    console.log(this.products)
   }
 }
