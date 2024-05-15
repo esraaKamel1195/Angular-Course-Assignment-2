@@ -1,25 +1,26 @@
 <main class="main">
   <app-header></app-header>
-  <!-- <app-add-product (onAddProduct)="addNewProduct($event)"></app-add-product>
+  <app-add-product (onAddProduct)="addNewProduct($event)"></app-add-product>
   <div class="container">
     <div class="row">
-      <div class="col-xs-12">
-        <app-products *ngFor="let product of products" [product]="product">
-        </app-products>
-      </div>
+      <app-products
+        class="col"
+        *ngFor="let product of products"
+        [product]="product"
+      >
+      </app-products>
     </div>
-  </div> -->
 
-  <div class="container">
     <div class="row">
-      <div class="col-xs-12">
-        <app-mails *ngFor="let mail of mails" [mail]="mail">
-          <img src="{{mail.image}}" alt="">
-        </app-mails>
-      </div>
+      <app-meals
+        class="col"
+        *ngFor="let meal of meals"
+        [meal]="meal"
+      >
+        <img src="{{ meal.image }}" alt="" style="height: 10rem" />
+      </app-meals>
     </div>
   </div>
-
   <app-footer></app-footer>
 </main>
 

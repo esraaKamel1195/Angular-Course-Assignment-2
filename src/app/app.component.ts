@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, QueryList, ViewChildren  } from '@angular/core';
+import { MealsComponent } from './meals/meals.component';
 
 @Component({
   selector: 'app-root',
@@ -7,32 +8,34 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Assignments';
-  // products: Array<any> = [
-  //   {
-  //     name: 'Product 1',
-  //     image: '../assets/Images/product.jpg',
-  //     price: 40,
-  //     description: 'description',
-  //   },
-  //   {
-  //     name: 'Product 2',
-  //     image: '../assets/Images/product.jpg',
-  //     price: 50,
-  //     description: 'description',
-  //   },
-  //   {
-  //     name: 'Product 3',
-  //     image: '../assets/Images/product.jpg',
-  //     price: 60,
-  //     description: 'description',
-  //   },
-  // ];
+  // @ViewChildren(MealsComponent) MealsComponent: QueryList<MealsComponent> = new QueryList<>;
 
-  // addNewProduct(product: any) {
-  //   this.products.push(product);
-  // }
+  products: Array<any> = [
+    {
+      name: 'Product 1',
+      image: '../assets/Images/product.jpg',
+      price: 40,
+      description: 'description',
+    },
+    {
+      name: 'Product 2',
+      image: '../assets/Images/product.jpg',
+      price: 50,
+      description: 'description',
+    },
+    {
+      name: 'Product 3',
+      image: '../assets/Images/product.jpg',
+      price: 60,
+      description: 'description',
+    },
+  ];
 
-  mails: Array<{ name: string; image: string; discription: string }> = [
+  addNewProduct(product: any) {
+    this.products.push(product);
+  }
+
+  meals: Array<{ name: string; image: string; discription: string }> = [
     {
       name: 'Mail 1',
       image: '../assets/Images/meal.jpg',
@@ -52,4 +55,8 @@ export class AppComponent {
         'discription discription discription discription discription',
     },
   ];
+
+  // showViewChildern(){
+  //   console.log(this.MealsComponent);
+  // }
 }

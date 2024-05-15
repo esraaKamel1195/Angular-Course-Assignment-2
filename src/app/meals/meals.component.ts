@@ -1,12 +1,12 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-mails',
-  templateUrl: './mails.component.html',
-  styleUrl: './mails.component.css',
+  selector: 'app-meals',
+  templateUrl: './meals.component.html',
+  styleUrl: './meals.component.css',
 })
-export class MailsComponent {
-  @Input({ required: true }) mail: {
+export class MealsComponent {
+  @Input({ required: true }) meal: {
     name: string;
     image: string;
     discription: string;
