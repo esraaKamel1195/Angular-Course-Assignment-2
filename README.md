@@ -1,2 +1,2 @@
-# Angular-Course-Assignment 2
+# Angular-Course-Assignments
 Practice and solve with angular v17 course

@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-meals',
@@ -11,4 +11,8 @@ export class MealsComponent {
     image: string;
     discription: string;
   } = { name: '', image: '', discription: '' };
+
+  @Output() displayMealDescription() {
+    alert(this.meal.discription);
+  }
 }

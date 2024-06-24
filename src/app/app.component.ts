@@ -1,4 +1,4 @@
-import { Component, QueryList, ViewChildren  } from '@angular/core';
+import { Component, ElementRef, QueryList, ViewChild, ViewChildren } from '@angular/core';
 import { MealsComponent } from './meals/meals.component';
 
 @Component({
@@ -7,8 +7,9 @@ import { MealsComponent } from './meals/meals.component';
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-  title = 'Assignments';
-  // @ViewChildren(MealsComponent) MealsComponent: QueryList<MealsComponent> = new QueryList<>;
+  title = 'Angular Assignments';
+  @ViewChild('container', {read: ElementRef}) container: ElementRef;
+  @ViewChildren(MealsComponent) Meals: QueryList<MealsComponent>;
 
   products: Array<any> = [
     {
@@ -56,7 +57,9 @@ export class AppComponent {
     },
   ];
 
-  // showViewChildern(){
-  //   console.log(this.MealsComponent);
-  // }
+  getRandomDescription (event: Event) {
+    console.log(event);
+    console.log('Meals list ', [...this.Meals]);
+    alert('Meal description '+ this.Meals.first.meal.discription);
+  }
 }

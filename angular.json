@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Assignment2": {
+    "Angular-course-assignments": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -23,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/assignment2",
+            "outputPath": "dist/angular-course-assignments",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -70,10 +70,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "Assignment2:build:production"
+              "buildTarget": "Analytics-course-assignments:build:production"
             },
             "development": {
-              "buildTarget": "Assignment2:build:development"
+              "buildTarget": "Angular-course-assignments:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -81,7 +81,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "Assignment2:build"
+            "buildTarget": "Angular-course-assignments:build"
           }
         },
         "test": {
